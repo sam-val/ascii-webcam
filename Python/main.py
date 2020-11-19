@@ -1,5 +1,4 @@
 import cv2.cv2 as cv2
-import time
 import numpy as np
 from PIL import Image, ImageFont, ImageDraw
 
