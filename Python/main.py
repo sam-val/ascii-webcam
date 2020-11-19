@@ -30,7 +30,7 @@ def make_ascii_string(gray_img_data):
     return rs
 
 
-font = ImageFont.truetype('CourierScreenplay.ttf', 15) #load the font
+font = ImageFont.truetype('fonts/CourierScreenplay.ttf', 15) #load the font
 
 capture = cv2.VideoCapture(0)
 
