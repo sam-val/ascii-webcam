@@ -36,14 +36,15 @@ font = ImageFont.truetype('CourierScreenplay.ttf', 15) #load the font
 capture = cv2.VideoCapture(0)
 
 width, height = 1200, 900
+FPS = 24
 RESIZE_AMOUNT = 15
 width, height = width // RESIZE_AMOUNT, height // RESIZE_AMOUNT
 capture.set(3, width)  ## set '3': the width
 capture.set(4, height)  ## set '4': the height
+
 while (True):
     # Capture fram by frame
     ret, frame = capture.read()
-
 
     # Process the image/frame
     mirror_framed = cv2.flip(frame, 1)
@@ -54,7 +55,6 @@ while (True):
 
     # Display the resulting frame
 
-    key = cv2.waitKey(1)
     ### convert the RESIZED_GRAY IMAGE DATA => An ascii string
     ascii_string = make_ascii_string(resized_gray)
     ascii_img = string_to_image_data(ascii_string, width, height)
@@ -62,10 +62,9 @@ while (True):
     cv2.imshow(winname='frame', mat=ascii_img)
     cv2.imshow(winname='gray', mat=gray)
 
+    key = cv2.waitKey(1)
     if key == ord("q"):
         break
-
-    time.sleep(1/24)
 
 capture.release()
 cv2.destroyAllWindows()
