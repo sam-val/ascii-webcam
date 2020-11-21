@@ -1,6 +1,5 @@
 import cv2.cv2 as cv2
 import numpy as np
-import sys
 
 def test_cam(cam):
     cap = cv2.VideoCapture(cam)
