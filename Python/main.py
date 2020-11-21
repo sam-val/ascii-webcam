@@ -1,12 +1,7 @@
 import cv2.cv2 as cv2
 import numpy as np
-from PIL import Image, ImageFont, ImageDraw
 
 def string_to_image_data(str, width, height):
-    font = cv2.FONT_HERSHEY_PLAIN
-    font_scale = 1
-    font_thickness = 1
-
     ### find the largest character's width, aka the '@' char:
     (max_char_w, max_char_h), base_line = cv2.getTextSize("@", font, font_scale, font_thickness)
 
@@ -36,16 +31,22 @@ def make_ascii_string(gray_img_data):
 
     return rs
 
+# SET UP FONT:
+font = cv2.FONT_HERSHEY_PLAIN
+font_scale = 1
+font_thickness = 1
 
-font = ImageFont.truetype('fonts/CourierScreenplay.ttf', 15) #load the font
+# SET UP FRAME SETTINGS - WIDTH, HEIGHT, ETC:
 capture = cv2.VideoCapture(0)
 width, height = 1200, 900
-FPS = 24
 RESIZE_AMOUNT = 15 # times
+    # Resize the frame to smaller one -- so that you can extract ASCII characters from it,
+    # otherwise - frame would be too big -- Ought to get width,height under (100,100)
 width, height = width // RESIZE_AMOUNT, height // RESIZE_AMOUNT
 capture.set(3, width)  ## set '3': the width
 capture.set(4, height)  ## set '4': the height
 
+# MAIN LOOP
 while (True):
     # Capture frame by frame
     ret, frame = capture.read()
@@ -64,11 +65,11 @@ while (True):
     ascii_img = string_to_image_data(ascii_string, width, height)
 
         ## then display the result and the gray scale one:
-    cv2.imshow(winname='frame', mat=ascii_img)
-    cv2.imshow(winname='gray', mat=mirror_framed)
+    cv2.imshow(winname='ascii_cam', mat=ascii_img)
+    cv2.imshow(winname='webcam', mat=mirror_framed)
 
     key = cv2.waitKey(1)
-    if key == ord("q"):
+    if key & 0xFF == ord("q"):
         break
 
 capture.release()
