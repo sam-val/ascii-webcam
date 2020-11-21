@@ -1,5 +1,13 @@
 import cv2.cv2 as cv2
 import numpy as np
+import sys
+
+def test_cam(cam):
+    cap = cv2.VideoCapture(cam)
+    if cap is None or not cap.isOpened():
+        print(f"Unable to open CAMERA {cam}")
+        return False
+    return True
 
 def string_to_image_data(str, width, height):
     ### find the largest character's width, aka the '@' char:
@@ -37,7 +45,13 @@ font_scale = 1
 font_thickness = 1
 
 # SET UP FRAME SETTINGS - WIDTH, HEIGHT, ETC:
-capture = cv2.VideoCapture(0)
+    # Check the camera:
+CAM = 0
+print('Trying to access CAM', CAM)
+assert test_cam(CAM), f"Failed to access CAMERA {CAM}. Please Check you camera."
+print("Accessed camera successfully.")
+
+capture = cv2.VideoCapture(CAM)
 width, height = 1200, 900
 RESIZE_AMOUNT = 15 # times
     # Resize the frame to smaller one -- so that you can extract ASCII characters from it,
