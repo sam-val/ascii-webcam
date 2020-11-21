@@ -1,4 +1,4 @@
-Using OPENCV in Python3...
+Using OpenCv-Python:
 
 ---HOW TO INSTALL---
 
