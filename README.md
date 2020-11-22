@@ -18,7 +18,7 @@ python3 main.py
 3. When to quit, press 'q'.
 
 
-SOME IMAGES:
+## Some images:
 
 ![cam_img_1](Python/imgs/cam_1.png)
 <img src="Python/imgs/ascii_1.png" width=400/>
