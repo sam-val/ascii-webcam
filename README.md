@@ -1,6 +1,6 @@
 Using OpenCv-Python:
 
----HOW TO INSTALL---
+## HOW TO USE:
 
 0. Install Python3
 1. Install the required modules using the lastest pip, run this at the /Python folder:
