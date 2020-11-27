@@ -1,18 +1,17 @@
-Using OpenCv-Python:
+## Turning Webcam feed into ASCII characters
 
-## How to use:
+**``Using openCV``**
 
-0. Install Python3
 1. Install the required modules using the lastest pip, run this at the /Python folder:
 
 ```
- pip3 install -r requirements.txt
+>> pip3 install -r requirements.txt
  ```
  
 2. Run main.py
 
 ```
-python3 main.py
+>> python3 main.py
 ```
 
 3. When to quit, press 'q'.
