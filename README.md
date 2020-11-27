@@ -1,6 +1,6 @@
-## Turning Webcam feed into ASCII characters
+**``Turning webcam feed into ASCII characters using openCV``**
 
-**``Using openCV``**
+## How: 
 
 1. Install the required modules using the lastest pip, run this at the /Python folder:
 
