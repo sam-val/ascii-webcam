@@ -18,12 +18,8 @@ python3 main.py
 3. When to quit, press 'q'.
 
 
-## Some images:
+## Some gif:
 
-![cam_img_1](Python/imgs/cam_1.png)
-<img src="Python/imgs/ascii_1.png" width=400/>
+<img src="Python/imgs/ascii_2.gif" width=600/>
 
-
-![cam_img_2](Python/imgs/cam_2.png)
-<img src="Python/imgs/ascii_2.png" width=400/>
 
