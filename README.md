@@ -1,4 +1,4 @@
-**``Turning webcam feed into ASCII characters using openCV``**
+### **``Turning webcam feed into ASCII characters using openCV.``**
 
 ## How: 
 
