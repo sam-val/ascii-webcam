@@ -2,6 +2,8 @@
 
 ## How: 
 
+0. Install Python 3
+
 1. Install the required modules using the lastest pip, run this at the /Python folder:
 
 ```
