@@ -52,7 +52,7 @@ print("Accessed camera successfully.")
 
 capture = cv2.VideoCapture(CAM)
 width, height = 1200, 900
-RESIZE_AMOUNT = 15 # times
+RESIZE_AMOUNT = 20 # times
     ## Resize the frame to smaller one -- so that you can extract ASCII characters from it,
     ## otherwise - frame would be too big -- Ought to get width,height under (100,100)
 width, height = width // RESIZE_AMOUNT, height // RESIZE_AMOUNT
