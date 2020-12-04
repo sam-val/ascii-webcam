@@ -24,4 +24,3 @@
 <img src="Python/imgs/ascii_2.gif" width=600/>
 
 
-hehe
